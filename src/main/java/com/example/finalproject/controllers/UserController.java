@@ -16,8 +16,8 @@ public class UserController {
     private UserService userService;
 
     @PostMapping({"/registerNewUser"})
-    public User registerNewUser(@RequestBody User user){
-        return userService.registerNewUser(user);
+    public void registerNewUser(@RequestBody User user){
+         userService.registerNewUser(user);
     }
 
     @GetMapping({"/forAdmin"})
